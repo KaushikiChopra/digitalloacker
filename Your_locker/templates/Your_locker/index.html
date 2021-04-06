@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>woelcome to login</title>
+    {% load static %}
+    <style>
+body {
+    height: 100%;
+    background-image: url("{%static 'kc/k.png' %}");
+    background-repeat: no-repeat;
+    background-size: 1400px 750px;
+    
+  
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  margin-left: 800px;
+}
+.form-signin h1{
+    font-weight: bold;
+    text-decoration: underline;
+    font-size:45px;
+    color: #FAFAFA;
+    text-decoration: underline;
+    font-family: 'Karla', sans-serif;
+}
+
+
+.form-signin h2{
+  font-weight: bold;
+    text-decoration: underline;
+    font-size: 30px;
+    color: #FAFAFA;
+    text-decoration: underline;
+    font-family: 'Karla', sans-serif;
+    
+}
+
+
+
+.form-signin .checkbox {
+  font-weight: 600px;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 19px;
+  color: #EFEBE9;
+  font-style: initial;
+  font-family: 'Karla', sans-serif;
+}
+
+.form-signin .checks{
+    
+    font-size: 13px;
+    color: white;
+    font-family: 'Karla', sans-serif;
+}
+
+.form-signin .copy{
+  padding-top:5px;
+  color:white;
+  font-family: 'Karla', sans-serif;
+  font-size: 11px;
+}
+
+.form-signin .sign{
+  margin-top:10px;
+  margin-left:6px;
+  text-align: center;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+      
+      </style>
+      <!-- Custom styles for this template -->
+      
+    </head>
+    <body>
+      {% load static %}
+    <div class="text-center">
+      <form class="form-signin" method="post" action="/"> {% csrf_token %}
+    <h1>Digital Locker</h1>
+    <h2>Please sign in</h2>
+    <div class="form-control">
+    <label for="inputEmail">Username</label> 
+    <input type="text" id="inputEmail" name="username"  placeholder="username" required autofocus>
+    </div>
+    <div class="form-control">
+    <label for="inputPassword">Password:</label>
+    <input type="password " id="inputPassword" name="password" placeholder="Password" required>
+    </div>
+    <div >
+    <input type="checkbox" value="remember-me" class="checkbox mb-3"><label class="checks">Remember Me</label>
+    </div>
+    <div><button class="sign" type="submit">Sign in</button></div>
+
+    <div class="copy"><p>&copy; Kaushiki Chopra</p></div>
+  </form>
+  </div>
+</body>
+</html>

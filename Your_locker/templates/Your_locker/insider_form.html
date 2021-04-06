@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>heyy</title>
+</head>
+<body>
+    <form class="first" id="uploads" method="POST" action="{%url 'Your_locker:Homes'%}">  {% csrf_token %}
+        Title of your file: &nbsp <input type="text" name="home_title">
+        <br>
+        <br>
+        <textarea rows="4" cols="50" name="text" form="uploads">
+            Enter text here...</textarea>
+        <br>
+        <br>
+        your document: &nbsp <input type="file" name="upload">
+        <br>
+        <br>
+        <input type="submit" name="Submit" value="Save Data">    
+
+    </form>
+    
+</body>
+</html>

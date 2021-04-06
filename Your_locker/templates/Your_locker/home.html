@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your locker</title>
+</head>
+<body>
+    Welcome {{request.user}}
+    <h1><b>YOUR LOCKER</b></h1>
+    <button style="background-color:lightGreen; color:white color:white height:80px;width:100px"><a href="/logout">Logout</a></button>
+    <button style="background-color:lightBlue; color:white color:white height:80px;width:100px"><a href="/upload">upload here </a></button>
+
+{% if all_homes %}
+    <h2><b> Your Documents : <b></h2>
+    <ol>
+        {% for home in all_homes %}
+            <li><a href="/home/{{ home.id}}/">{{ home.home_title}}</a></li>
+            <button style="background-color:red; color:white height:80px;width:50px">Delete</button>
+            <button style="background-color:Yellow; color:white height:80px;width:50px">Edit</button>
+        {% endfor %}
+    </ol>
+{% else %}
+    <h2>nothing</h2>
+{% endif %}
+
+    
+
+    
+    
+</body>
+</html>
